@@ -1,48 +1,100 @@
 <!DOCTYPE html>
 <html>
 
-
-
 <head>
-	<style> 
-		#rhia{
+    <style>
+        #rhia{
 
 			background-image: url(https://static.wixstatic.com/media/c7c774_03347b7d3ceb44a6b2f9b38693ebf40e~mv2.png/v1/fill/w_502,h_224,al_c,q_80,usm_0.66_1.00_0.01/platypus.webp);
-			width:95px;
-			height:45px;
-			background-size: contain;
+			width:190px;
+			height:90px;
+			background-size: cover;
 			position: absolute;
+			cursor: none;
 
-			width: +10;
 		}
 
-	</style>	
-
+	</style>
 </head>
 
-
-
 <body>
+<h2></h2>    
 
-	<div id = "rhia"></div>
 
-	<script type="text/javascript">
 
-	var square = document.getElementById("rhia");
+<div id="rhia"></div>
+    <script type="text/javascript">
+    var square = document.getElementById("rhia");
 
-		document.addEventListener("mousemove", function(event) {
-			console.log(event.clientX, event.clientY)
-			rhia.style.left = event.clientX - 50 + "px";
+    // document.addEventListener("mousemove", function(event) {
+    //     console.log(event.clientX, event.clientY)
+    //     rhia.style.left = event.clientX - 50 + "px";
 
-			rhia.style.top = event.clientY- 50 + "px";
-		});
+    //     rhia.style.top = event.clientY - 50 + "px";
+    // });
 
-		
-		
-	</script>
+    document.addEventListener("mousemove", function (event) {console.log(event)});
 
+
+
+         function createImage() {
+
+            var platy = document.createElement('div');
+            platy.style.width = "190px";
+            platy.style.height = "90px";
+            platy.style.backgroundSize = "cover";
+            platy.style.backgroundImage = "url(https://static.wixstatic.com/media/c7c774_03347b7d3ceb44a6b2f9b38693ebf40e~mv2.png/v1/fill/w_502,h_224,al_c,q_80,usm_0.66_1.00_0.01/platypus.webp)";
+            document.body.appendChild(platy);
+            platy.style.left = event.clientX - 50 + "px";
+            platy.style.top = event.clientY - 50 + "px";
+            platy.style.position = "fixed";
+            platy.style.display = "inline-block";
+
+        };
+
+    document.addEventListener("click", createImage
+
+        // function() {console.log("hello?")});
+
+   );
+
+
+
+
+    // function createImage() {
+
+    //     var platy = document.createElement('div');
+    //     platy.style.width = "190px";
+    //     platy.style.height = "90px";
+    //     platy.style.backgroundSize = "cover";
+    //     document.body.appendChild(platy);
+    //     platy.style.left = "event.clientX - 50 + "px"";
+    //     platy.style.top = "event.clientY - 50 + "px""
+
+
+
+    // 	platy.style.backgroundImage = "url(https://static.wixstatic.com/media/c7c774_03347b7d3ceb44a6b2f9b38693ebf40e~mv2.png/v1/fill/w_502,h_224,al_c,q_80,usm_0.66_1.00_0.01/platypus.webp)";
+
+
+
+
+
+    // };
+
+
+    // 	function(event) {
+
+    //     console.log(event.clientX, event.clientY)
+    //     rhia.style.left = event.clientX - 50 + "px";
+
+    //     rhia.style.top = event.clientY - 50 + "px";
+    // });
+
+
+
+
+    // createImage();
+    </script>
 </body>
-
-
 
 </html>
