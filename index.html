@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+	<style> 
+		#rhia{
+
+			background-image: url(https://static.wixstatic.com/media/c7c774_03347b7d3ceb44a6b2f9b38693ebf40e~mv2.png/v1/fill/w_502,h_224,al_c,q_80,usm_0.66_1.00_0.01/platypus.webp);
+			width:95px;
+			height:45px;
+			background-size: contain;
+			position: absolute;
+
+			width: +10;
+		}
+
+	</style>	
+
+</head>
+
+
+
+<body>
+
+	<div id = "rhia"></div>
+
+	<script type="text/javascript">
+
+	var square = document.getElementById("rhia");
+
+		document.addEventListener("mousemove", function(event) {
+			console.log(event.clientX, event.clientY)
+			rhia.style.left = event.clientX - 50 + "px";
+
+			rhia.style.top = event.clientY- 50 + "px";
+		});
+
+		
+		
+	</script>
+
+</body>
+
+
+
+</html>
