@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Magic</title>
+	<style>
+		
+		.pineapples{
+			width: 100px;
+			height: 100px;
+			background-image:url(pineapple.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			display: inline-block;
+			position:absolute;
+			z-index: 1;
+
+		}
+
+		#button{
+			width:100px;
+			height:100px;
+			background-color:red;
+			z-index:2;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="pineapples"></div>
+
+	<script type="text/javascript">
+
+		function makePineapple (){
+
+			var pineapple = document.createElement("div");
+			document.body.appendChild(pineapple);
+			pineapple.classList.add("pineapples");
+			pineapple.style.left = Math.round(Math.random()*1000) + "px";
+			pineapple.style.top = Math.round(Math.random()*1000) + "px";
+			var button = document.getElementById("button");
+			button.addEventListener("click", function disappear(){
+			pineapple.classList.remove("pineapples");
+		}
+
+	}
+
+		for (var i=0; i<100; i++) { // makes several
+			
+			makePineapple();
+		}
+
+	</script>
+	
+</body>
+</html>

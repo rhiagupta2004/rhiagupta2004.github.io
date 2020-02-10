@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> doggo</title>
+	<style type="text/css"></style>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+		function makeDoggo (){
+
+			var doggo = document.createElement("div");
+			doggo.style.height = "200px";
+			doggo.style.width = "200px";
+			// doggo.style.backgroundColor = "blue";
+			doggo.style.backgroundImage = " url(https://media.socastsrm.com/wordpress/wp-content/blogs.dir/456/files/2019/07/ESD.jpg)";
+			doggo.style.backgroundSize = "contain";
+			doggo.style.backgroundRepeat = "no-repeat";
+
+			document.body.appendChild(doggo);
+
+
+		}
+
+		for (var i=0; i<100; i++) { // makes several
+			
+			makeDoggo();
+		}
+
+ 		// makeDoggo() would make just one
+	</script>
+	
+</body>
+</html>

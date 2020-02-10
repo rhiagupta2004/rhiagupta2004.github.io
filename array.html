@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+
+<body>
+    <input type="text" id="userInput"></input>
+    <button id="btn">Add your favorite dog</button>
+    <div id="list">
+    </div>
+
+    <script type="text/javascript">
+        var dogs = [];
+
+        document.getElementById("btn").addEventListener("click", function(){
+            dogs.push(document.getElementById("userInput").value);
+            document.getElementById("list").innerHTML = dogs;
+        });
+    </script>
+</body>
+</html>

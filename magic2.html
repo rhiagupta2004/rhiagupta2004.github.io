@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style>
+		.pineapples{
+			width:100px;
+			height:50px;
+			background-image:url(pineapple.png);
+			background-size:contain;
+			background-repeat: no-repeat;
+			position:absolute;
+			display:inline-block;
+			z-index: 1;
+		}
+
+		#button{
+			width:10px;
+			height:10px;
+			background-color:blue;
+			z-index:2;
+		}
+
+		#beach{
+			background-image:url(beach.png);
+			width:100%;
+			background-size:cover;
+			height:850px;
+			z-index: 0;
+		}
+
+
+	</style>
+
+
+
+</head>
+<body>
+
+	<div id="button"></div>
+	<div id="beach"></div>
+	
+<script type="text/javascript">
+
+
+
+	var bugs = [
+	]
+	
+	function makePineapples () {
+		var p = document.createElement("div");
+		document.body.appendChild(p);
+		p.classList.add("pineapples");
+		// console.log(Math.round(Math.random()*1000)+"px");
+		p.style.left = Math.round(Math.random()*1200)+"px";
+		p.style.top = Math.round(Math.random()*800)+"px";
+
+		var button = document.getElementById("button");
+		button.addEventListener("click", function disappear(){
+		p.classList.remove("pineapples");
+	})
+
+
+	}
+
+		
+
+	for(var i=0;i<1000; i++){
+		makePineapples();
+	}
+
+</script>
+<!-- 	write a function that makes divs
+ -->
+</body>
+</html>
