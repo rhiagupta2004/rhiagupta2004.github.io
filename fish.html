@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <!-- What do I want to make? my favorite videos?
+school of fish. But I want each of them to know where they are in relationship to each other but I have no word for "me" or self.
+Make them bigger basedon how left they are? 
+Make the color change based on the wind speed?
+Show examples of cool projects where represent data in a particular way?
+ -->
+    <script type="text/javascript">
+    //constructor function)
+
+    var lookdown = this;
+    lookdown.makeFish = function(i) {
+
+        var fish = document.createElement("div")
+        document.body.appendChild(fish);
+        fish.style.width = "400px";
+        fish.style.transition="0.5s";
+        fish.style.height = "400px";
+        fish.style.backgroundImage="url(fish1.png)";
+        fish.style.backgroundSize="cover";
+        fish.style.backgroundColor = 'rgb(' + Math.random() * 255 + "," + Math.random() * 255 + "," + Math.random() * 255 + ")";
+        fish.style.display = "inline-block";
+        fish.style.position = "relative";
+
+        function setPosition() {
+            fish.style.left = Math.random() * 400 + "px";
+            fish.style.top = Math.random() * 400 + "px";
+        }
+
+//positioning in relationship to the mouse- want each one to swarm around it.p[]
+        // document.addEventListener(
+        // 	"mousemove,")
+
+        var move = 
+            setInterval(setPosition, 500);
+
+     
+
+     
+        fish.id = "fish" + i;
+
+        fish.addEventListener("click", function stop() {
+            console.log('hi');
+            clearInterval(move);
+        });
+
+    };
+    // new makeFish();
+
+    for (var i = 0; i < 100; i = i + 1) { new makeFish(i) };
+
+
+
+    // function setPosition() {
+    //         makeFish.fish.style.left = makeFish.fish.style.left + Math.random() * 10 + "px";
+    //         makeFish.fish.style.top = makeFish.fish.style.top + Math.random() * 10 + "px";}
+
+    //         setInterval(setPosition, 500);
+    </script>
+</body>
+
+</html>

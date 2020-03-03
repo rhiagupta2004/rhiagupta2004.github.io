@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+    </title>
+    <style type="text/css">
+    	#tracklanes{
+			width:100%;
+			background-size:cover;
+			height:850px;
+			z-index: 0;
+			background-color:rgb(197);
+		}
+
+
+    </style>
+</head>
+
+<body>
+	<div class="tracklanes" id="track1"></div>
+	<div class="tracklanes" id="track2"></div>
+	<div class="tracklanes" id="track3"></div>
+    <script type="text/javascript">
+    var runner1 = {
+        name: "cameron",
+        type: "r1",
+        speed: 55,
+        width: "200px",
+        height: "200px", 
+        left: 0,
+        drive: function (){
+        	console.log("I'm driving!")
+        }
+
+
+    };
+
+
+
+    var runner2 = {
+        name: "kelly",
+        type: "r2",
+        speed: 50,
+        width: "200px",
+        height: "200px", 
+        left: 0
+
+
+    };
+
+
+
+    var runner3 = {
+        name: "tyler",
+        type: "r3",
+        speed: 100,
+        width: "200px",
+        height: "200px", 
+        left: 0
+
+
+    };
+
+    function makeRunner(x) {
+        var d = document.createElement("div");
+        document.body.appendChild(d);
+        d.style.position = "relative";
+        d.style.left = x.left;
+        d.style.backgroundSize = "contain";
+        d.style.backgroundRepeat="no-repeat";
+
+        d.id = x.name;
+        d.style.backgroundImage = "url(" + x.type + ".png)";
+        d.style.width = x.width;
+        d.style.transition="1s";
+        d.style.height = x.height;
+        
+        var left = 0;
+
+        function go() {
+        	d.style.backgroundImage = "url(" + x.type + ".gif)";
+        	left = left + x.speed;
+            d.style.left = left + "px";
+        	console.log(left);
+        }
+
+
+        d.addEventListener(
+            "click",
+            function() {
+                setInterval(go, 200);
+            });
+
+
+
+    }; //end of function makeCar;
+
+    makeRunner(runner1);
+     makeRunner(runner2);
+   makeRunner(runner3);
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+    #roly {
+        width: 200px;
+        height: 200px;
+        background-color: black;
+        position: absolute;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="roly"></div>
+    <script type="text/javascript">
+    var roly = document.getElementById("roly");
+
+
+    var left = roly.style.left;
+    left = "0px"
+
+    document.addEventListener("keydown", function(x) {
+        // alert(event.keyCode);
+        // console.log(x);
+        if (x.keyCode == 39) {
+            left=parseInt(left)+10+"px";};
+            roly.style.left=left;
+            console.log(left);
+
+        });
+    </script>
+</body>
+
+</html>
